@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GiaBao_2011061513.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace GiaBao_2011061513.Models
+namespace GiaBao_2011061513.ViewModels
 {
     public class CourseViewModel
     {
