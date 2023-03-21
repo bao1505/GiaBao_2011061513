@@ -22,5 +22,6 @@ namespace GiaBao_2011061513.ViewModels
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
+        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using GiaBao_2011061513.Models;
+using GiaBao_2011061513.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -21,7 +22,12 @@ namespace GiaBao_2011061513.Controllers
                 .Include(c => c.Lecture)
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
-            return View(upcommingCourses);
+            var viewModel = new CoursesViewModel
+            {
+                UpcommingCourses = upcommingCourses,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+            return View(viewModel);
         }
         
 
